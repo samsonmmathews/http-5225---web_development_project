@@ -8,7 +8,7 @@
 <body>
     <?php
         echo "Challenge 2: PHP Control Structures - The Magic Number Game<br>";                                                                                                                         
-        $number = rand(1, 100);
+        $number = rand(1, 1000);
         echo "The input number is: ".$number."<br>";
         if(($number % 3 == 0) && ($number % 5 == 0))
         {
