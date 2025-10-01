@@ -10,21 +10,22 @@
     <hr>
     <div>
         <?php
-            $connect = mysqli_connect(
-                'localhost',
-                'root', 
-                '', // password
-                'schools' // database name
-            );
-
-            if (!$connect) {
-                die('Connection failed: ' . mysqli_connect_error());
-            }
-
+            
+            <require 'connect.php';
+            
             $query = "SELECT * FROM schools";
             $schools = mysqli_query($connect, $query);
 
-            echo '<pre>' . print_r($schools) . '</pre>';
+            // echo '<pre>' . print_r($schools) . '</pre>';
+
+            foreach ($schools as $school) {
+                echo $school['School Name'] . 
+                '<form>
+                <input type="hidden" name="id" value="123">
+                <input type="submit" value="EDIT">
+                </form>' . 
+                '<br>';
+            }
         ?>
 </body>
 </html>
