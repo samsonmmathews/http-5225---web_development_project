@@ -11,9 +11,9 @@
     <div>
         <?php
             
-            <require 'connect.php';
+            require 'connect.php';
             
-            $query = "SELECT * FROM schools";
+            $query = 'SELECT * FROM schools';
             $schools = mysqli_query($connect, $query);
 
             // echo '<pre>' . print_r($schools) . '</pre>';
@@ -22,10 +22,19 @@
                 echo $school['School Name'] . 
                 '<form>
                 <input type="hidden" name="id" value="123">
-                <input type="submit" value="EDIT">
+                <input type="submit" value="Edit">
                 </form>' . 
                 '<br>';
-            }
+            };
         ?>
+        <style>
+            .Box {
+                border: 1px solid red;
+            }
+        </style>
+        <div class="Box">
+            <h3>School Name</h3>
+        </div>
+    </div>
 </body>
 </html>
