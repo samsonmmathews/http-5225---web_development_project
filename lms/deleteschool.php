@@ -10,6 +10,7 @@
         $school = mysqli_query($connect, $query);
         
         if($school) {
+            echo "Record deleted successfully";
             header('Location: index.php');
         }
         else {
