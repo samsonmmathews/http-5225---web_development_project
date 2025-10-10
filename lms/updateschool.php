@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit School</title>
+    <title>Update School</title>
 </head>
 <body>
-    <h1>Edit School</h1>
+    <h1>Update School</h1>
     <div>
         <?php include('nav.php'); ?>
     </div>
@@ -43,7 +43,7 @@
         }
     }
     ?>
-        <form action="editschool.php" method="POST">
+        <form action="updateschool.php" method="POST">
             <input type="text" name="boardName" placeHolder="Board Name" value="<?php echo $school['Board Name'] ?>">
             <br>
             <input type="text" name="schoolName" placeHolder="School Name" value="<?php echo $school['School Name'] ?>">
