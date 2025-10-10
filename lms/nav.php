@@ -1,6 +1,6 @@
 <nav>
-    <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="addschool.php">Add School</a></li>
-    </ul>
+    <div>
+        <a href="index.php" class="btn btn-primary btn-sm">Home</a>
+        <a href="addschool.php" class="btn btn-primary btn-sm">Add School</a>
+    </div>
 </nav>
