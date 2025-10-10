@@ -6,7 +6,7 @@
     <title>Add School</title>
 </head>
 <body>
-    <h1>Schools</h1>
+    <h1>Add School</h1>
     <div>
         <?php include('nav.php'); ?>
     </div>
@@ -15,6 +15,7 @@
 
     <?php
         require('connect.php');
+        
         if(isset($_POST['addSchool'])) {
             // print_r($POST);
             $boardName=$_POST['boardName'];
@@ -25,6 +26,7 @@
             $query = "INSERT INTO schools (`Board Name`, `School Name`, `School Number`, `School Level`) VALUES ('$boardName', '$schoolName', '$schoolNumber', '$schoolLevel')";
 
         $school = mysqli_query($connect, $query);
+        
         if($school) {
             header('Location: index.php');
         }
