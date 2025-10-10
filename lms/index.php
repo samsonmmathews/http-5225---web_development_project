@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Schools</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <h1>Schools</h1>
@@ -28,10 +30,10 @@
                         <p class="card-text">School Number: ' . $school['School Number'] . '</p>
                         <p class="card-text">School Level: ' . $school['School Level'] . '</p>
                         <span class="badge bg-secondary">School Language: ' . $school['School Language'] . '</span>
-                        <span class="badge bg-info">, School Type: ' . $school['School Type'] . '</span>
+                        <span class="badge bg-info">School Type: ' . $school['School Type'] . '</span>
                         <p class="card-text">School Special Conditions: ' . $school['School Special Conditions'] . '</p>
                         <span class="badge bg-secondary">Phone: ' . $school['Phone'] . '</span>
-                        <span class="badge bg-info">, Email: ' . $school['Email'] . '</span>
+                        <span class="badge bg-info">Email: ' . $school['Email'] . '</span>
                         <p class="card-text">Fax: ' . $school['Fax'] . '</p>
                         <p class="card-text">Address: ' . $school['Street'] . ', ' . $school['City'] . ', ' . $school['Province'] . ', ' . $school['Postal Code'] .'</p>
                         <p class="card-text">Grade Range: ' . $school['Grade Range'] . '</p>
