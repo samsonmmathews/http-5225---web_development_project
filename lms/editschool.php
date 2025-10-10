@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add School</title>
+    <title>Edit School</title>
 </head>
 <body>
-    <h1>Schools</h1>
+    <h1>Edit School</h1>
     <div>
         <?php include('nav.php'); ?>
     </div>
@@ -22,16 +22,19 @@
             $result = mysqli_query($connect, $query);
             $school = $result -> fetch_assoc();
         }
-        if(isset($POST['updateSchool'])) {
-            // print_r($POST);
-            $boardName=$_POST['boardName'];
-            $schoolName=$_POST['schoolName'];
-            $schoolNumber=$_POST['schoolNumber'];
-            $schoolLevel=$_POST['schoolLevel'];
 
-            $query = "INSERT INTO schools (Board Name, School Name, School Number, School Level) VALUES ('$boardName', '$schoolName', '$schoolNumber', '$schoolLevel')";
+        if(isset($_POST['updateSchool'])) {
+            // print_r($POST);
+            $id = $_POST['id'];
+            $boardName = $_POST['boardName'];
+            $schoolName = $_POST['schoolName'];
+            $schoolNumber = $_POST['schoolNumber'];
+            $schoolLevel = $_POST['schoolLevel'];
+
+            $query = "UPDATE schools SET `Board Name`='$boardName', `School Name`='$schoolName', `School Number`='$schoolNumber', `School Level`='$schoolLevel' WHERE id=$id";
 
         $school = mysqli_query($connect, $query);
+
         if($school) {
             header('Location: index.php');
         }
@@ -40,15 +43,15 @@
         }
     }
     ?>
-        <form action="updateschool.php" method="POST">
+        <form action="editschool.php" method="POST">
             <input type="text" name="boardName" placeHolder="Board Name" value="<?php echo $school['Board Name'] ?>">
             <br>
             <input type="text" name="schoolName" placeHolder="School Name" value="<?php echo $school['School Name'] ?>">
             <br>
-            <input type="number" name="schoolNumber" placeHolder="School Number">
+            <input type="number" name="schoolNumber" placeHolder="School Number" value="<?php echo $school['School Number'] ?>">
             <br>
-            <input type="text" name="schoolLevel" placeholder="School Level">
-            <input type="submit" name="addSchool" value="Add">
+            <input type="text" name="schoolLevel" placeholder="School Level" value="<?php echo $school['School Level'] ?>">
+            <input type="submit" name="updateSchool" value="Update">
         </form>
     </div>
 </body>
