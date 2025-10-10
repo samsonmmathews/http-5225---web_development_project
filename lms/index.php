@@ -48,7 +48,7 @@
                             </form>
                           </div>
                           <div class="col text-end">
-                            <form action="deleteschool.php" method="GET">
+                            <form action="deleteschool.php" method="POST">
                                 <input type="hidden" name="id" value="' . $school['id'] . '">
                                 <button type="submit" name="deleteSchool" class="btn btn-sm btn-danger">Delete</button>
                               </form>
