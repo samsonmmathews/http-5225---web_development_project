@@ -15,14 +15,14 @@
 
     <?php
         require('connect.php');
-        if(isset($POST['addSchool'])) {
+        if(isset($_POST['addSchool'])) {
             // print_r($POST);
             $boardName=$_POST['boardName'];
             $schoolName=$_POST['schoolName'];
             $schoolNumber=$_POST['schoolNumber'];
             $schoolLevel=$_POST['schoolLevel'];
 
-            $query = "INSERT INTO schools (Board Name, School Name, School Number, School Level) VALUES ('$boardName', '$schoolName', '$schoolNumber', '$schoolLevel')";
+            $query = "INSERT INTO schools (`Board Name`, `School Name`, `School Number`, `School Level`) VALUES ('$boardName', '$schoolName', '$schoolNumber', '$schoolLevel')";
 
         $school = mysqli_query($connect, $query);
         if($school) {

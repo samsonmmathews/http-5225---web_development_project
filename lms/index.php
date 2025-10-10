@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Schools</h1>
+    <?php include('nav.php'); ?>
     <hr>
     <div>
         <?php
@@ -32,9 +33,9 @@
                 border: 1px solid red;
             }
         </style>
-        <div class="Box">
+        <!-- <div class="Box">
             <h3>School Name</h3>
-        </div>
+        </div> -->
     </div>
 </body>
 </html>
