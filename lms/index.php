@@ -35,6 +35,9 @@
                         <p class="card-text">Fax: ' . $school['Fax'] . '</p>
                         <p class="card-text">Address: ' . $school['Street'] . ', ' . $school['City'] . ', ' . $school['Province'] . ', ' . $school['Postal Code'] .'</p>
                         <p class="card-text">Grade Range: ' . $school['Grade Range'] . '</p>
+                        <p class="card-text">Date Open: ' . $school['Date Open'] . '</p>
+                        <p class="card-text">Website: ' . $school['Website'] . '</p>
+                        <p class="card-text">Board Website: ' . $school['Board Website'] . '</p>
                       </div>
                       <div class="card-footer">
                         <div class="row">
