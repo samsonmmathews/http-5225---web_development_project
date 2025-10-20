@@ -10,7 +10,7 @@
     <h2 class="mb-4">Login</h2>
 
     <?php if (isset($error)): ?>
-        <div class="alert alert-danger"><?= htmlspecialchars($error) ?></div>
+        <div class="alert alert-danger"><?= $error ?></div>
     <?php endif; ?>
 
     <form method="POST">
@@ -19,7 +19,7 @@
         <button class="btn btn-primary w-100" type="submit" name="login">Login</button>
     </form>
 
-    <a href="register.php" class="btn btn-link mt-3">Don’t have an account? Register</a>
+    <a href="register.php" class="btn btn-link mt-3">Don't have an account? Register</a>
 
     <?php
     session_start();
@@ -36,10 +36,8 @@
         $email = trim($_POST['email']);
         $password = $_POST['password'];
 
-        $stmt = $connect->prepare("SELECT id, name, password, image FROM users WHERE email = ?");
-        $stmt->bind_param("s", $email);
-        $stmt->execute();
-        $result = $stmt->get_result();
+        $query = "SELECT `id`, `name`, `password`, `image` FROM users WHERE `email` = '$email'";
+        $result = mysqli_query($connect, $query);
 
         if ($result->num_rows === 1) 
         {
