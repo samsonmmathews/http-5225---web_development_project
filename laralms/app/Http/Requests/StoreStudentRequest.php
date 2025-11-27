@@ -24,7 +24,7 @@ class StoreStudentRequest extends FormRequest
         return [
             'fname' => 'required | string',
             'lname' => 'required | string',
-            'email' => 'required|email'
+            'email' => 'required | email'
         ];
     }
 }
