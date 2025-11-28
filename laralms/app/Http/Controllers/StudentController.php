@@ -6,6 +6,8 @@ use App\Models\Student;
 use App\Http\Requests\StoreStudentRequest;
 use App\Http\Requests\UpdateStudentRequest;
 
+use Illuminate\Support\Facades\Session;
+
 class StudentController extends Controller
 {
     /**
@@ -65,6 +67,7 @@ class StudentController extends Controller
      */
     public function destroy(Student $student)
     {
-        //
+        Student::destroy($student['id']);
+        return redirect() -> route('students.index');
     }
 }
