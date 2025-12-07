@@ -7,7 +7,7 @@
                 <div class="col-sm-3">
                     <div class="card mb-3">
                         <div class="card-header">
-                            <h5 class="card-title">{{ $course -> course }} </h5>
+                            <h5 class="card-title">{{ $course -> name }} </h5>
                         </div>
                         <div class="card-body">
                             <p class="card-text">Description: {{ $course->description }}

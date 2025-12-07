@@ -20,8 +20,8 @@
 
 <form action="{{ route('courses.store') }}" method="POST">
     {{ csrf_field() }}
-    <input type="text" name="course" placeholder="Course Name">
-    @error('course')
+    <input type="text" name="name" placeholder="Course Name">
+    @error('name')
         <span class="text-danger">
             {{ $message }}
         </span>
