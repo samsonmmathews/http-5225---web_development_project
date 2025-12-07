@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -18,5 +19,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 Route::resource('students', StudentController::class);
+Route::resource('courses', CourseController::class);
 
 require __DIR__.'/settings.php';
