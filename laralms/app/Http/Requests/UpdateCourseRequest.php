@@ -22,7 +22,7 @@ class UpdateCourseRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'course' => 'required | string',
+            'name' => 'required | string',
             'description' => 'required | string'
         ];
     }
