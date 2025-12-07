@@ -12,11 +12,11 @@
                         </div>
                         <div class="card-footer">
                             <a href="{{ route('students.edit', $student -> id ) }}" class="btn btn-sm btn-success">Edit</a>
-                            {{-- <form action="{{ route('students.destroy', $student -> id ) }}" method="post">
+                            <form action="{{ route('students.destroy', $student -> id ) }}" method="post">
                                 <input type="submit" value="Delete" />
                                 @method('delete')
                                 @csrf
-                            </form> --}}
+                            </form>
                         </div>
                     </div>
                 </div>
