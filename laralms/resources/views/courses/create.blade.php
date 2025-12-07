@@ -1,6 +1,6 @@
 @extends('template')
 @section('content')
-<h3>Add a Student</h3>
+<h3>Add a Course</h3>
 
 <div class="container">
     <div class="row">
@@ -18,29 +18,22 @@
     </div>
 </div>
 
-<form action="{{ route('students.store') }}" method="POST">
+<form action="{{ route('courses.store') }}" method="POST">
     {{ csrf_field() }}
-    <input type="text" name="fname" placeholder="First Name">
-    @error('fname')
+    <input type="text" name="course" placeholder="Course Name">
+    @error('course')
         <span class="text-danger">
             {{ $message }}
         </span>
     @enderror
     <br><br>
-    <input type="text" name="lname" placeholder="Last Name">
-    @error('lname')
+    <input type="text" name="description" placeholder="Description">
+    @error('description')
         <span class="text-danger">
             {{ $message }}
         </span>
     @enderror
     <br><br>
-    <input type="email" name="email" placeholder="Email">
-    @error('email')
-        <span class="text-danger">
-            {{ $message }}
-        </span>
-    @enderror
-    <br><br>
-    <input type="submit" value="Add Student">
+    <input type="submit" value="Add Course">
 </form>
 @endsection
