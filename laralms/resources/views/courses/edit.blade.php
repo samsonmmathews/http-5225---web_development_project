@@ -5,7 +5,7 @@
 <form action="{{ route('courses.update', $course -> id) }}" method="POST">
     @method('PUT')
     {{ csrf_field() }}
-    <input type="text" name="course" value="{{ $course -> course }}">
+    <input type="text" name="name" value="{{ $course -> name }}">
     <br><br>
     <input type="text" name="description" value="{{ $course -> description }}">
     <br><br>
