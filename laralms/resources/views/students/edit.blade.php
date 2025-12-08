@@ -1,6 +1,6 @@
 @extends('template')
 @section('content')
-<h3>Update Student</h3>
+<h3>Update Student Details</h3>
 
 <form action="{{ route('students.update', $student -> id) }}" method="POST">
     @method('PUT')

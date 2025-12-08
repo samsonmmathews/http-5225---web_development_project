@@ -31,7 +31,10 @@
               <a class="nav-link" href="{{ route('courses.create') }}">Add Courses</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              <a class="nav-link" href="{{ route('professors.index') }}">Professors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('professors.create') }}">Add Professor</a>
             </li>
           </ul>
         </div>
