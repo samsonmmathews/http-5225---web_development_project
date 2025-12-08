@@ -20,13 +20,15 @@
 
 <form action="{{ route('professors.store') }}" method="POST">
     {{ csrf_field() }}
-    <input type="text" name="name" placeholder="Professor Name">
-    @error('name')
-        <span class="text-danger">
-            {{ $message }}
-        </span>
-    @enderror
-    <br><br>
+    <div class="mb-3">
+        <label for="name" class="form-label" type="text" name="name" placeholder="Email">Name</label>
+        <input id="name" type="text" class="form-control" name="name" placeholder="Please enter the name" aria-label="First name">
+        @error('name')
+            <span class="text-danger">
+                {{ $message }}
+            </span>
+        @enderror
+    </div>
     <input type="submit" value="Add Professor">
 </form>
 @endsection
