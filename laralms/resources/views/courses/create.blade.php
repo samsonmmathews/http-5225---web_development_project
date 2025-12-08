@@ -20,20 +20,24 @@
 
 <form action="{{ route('courses.store') }}" method="POST">
     {{ csrf_field() }}
-    <input type="text" name="name" placeholder="Course Name">
-    @error('name')
-        <span class="text-danger">
-            {{ $message }}
-        </span>
-    @enderror
-    <br><br>
-    <input type="text" name="description" placeholder="Description">
-    @error('description')
-        <span class="text-danger">
-            {{ $message }}
-        </span>
-    @enderror
-    <br><br>
+    <div class="mb-3">
+        <label for="name" class="form-label" type="text" name="name" placeholder="Email">Course Name</label>
+        <input id="name" type="text" class="form-control" name="name" placeholder="Please enter the course name" aria-label="First name">
+        @error('name')
+            <span class="text-danger">
+                {{ $message }}
+            </span>
+        @enderror
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label" type="text" name="description">Description</label>
+        <input id="description" type="text" class="form-control" name="description" placeholder="Please enter the course description" aria-label="Description">
+        @error('description')
+            <span class="text-danger">
+                {{ $message }}
+            </span>
+        @enderror
+    </div>
     <input type="submit" value="Add Course">
 </form>
 @endsection
