@@ -22,8 +22,8 @@
     @method('PUT')
     {{ csrf_field() }}
     <div class="mb-3">
-        <label for="name" class="form-label" type="text" name="name" placeholder="Email">Name</label>
-        <input id="name" type="text" class="form-control" name="name" value="{{ $professor -> name }}" aria-label="First name">
+        <label for="name" class="form-label" type="text" name="name">Name</label>
+        <input id="name" type="text" class="form-control" name="name" value="{{ $professor -> name }}" aria-label="Name">
         @error('name')
             <span class="text-danger">
                 {{ $message }}
