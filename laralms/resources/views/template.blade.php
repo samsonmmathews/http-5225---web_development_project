@@ -18,24 +18,30 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('students.index') }}">Students</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('students.create') }}">Add Students</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('courses.index') }}">Courses</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('courses.create') }}">Add Courses</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('professors.index') }}">Professors</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('professors.create') }}">Add Professor</a>
-            </li>
+            <div>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('students.index') }}">Students</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('students.create') }}">Add Students</a>
+              </li>
+            </div>
+            <div>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('courses.index') }}">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('courses.create') }}">Add Courses</a>
+              </li>
+            </div>
+            <div>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('professors.index') }}">Professors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('professors.create') }}">Add Professor</a>
+              </li>
+            </div>
           </ul>
         </div>
       </div>
