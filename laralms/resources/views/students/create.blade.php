@@ -50,6 +50,22 @@
         @enderror
         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
     </div>
+    <div>
+        <div class="col">
+            <label for="courses" class="form-label" type="text" name="courses">Select the course</label>
+            <br>
+            @foreach ($courses as $course)
+                <input id="courses" type="checkbox" name="courses[]" value="{{ $course->id }}">
+                {{ $course->name }}
+                <br>
+            @endforeach
+            @error('courses')
+                <span class="text-danger">
+                    {{ $message }}
+                </span>
+            @enderror
+        </div>
+    </div>
     <input type="submit" value="Add Student">
 </form>
 @endsection
