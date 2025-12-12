@@ -46,7 +46,7 @@
             <option value="{{$professor->id}}">{{$professor-> name}}</option>
         @endforeach
         </select>
-        <br>
+        <br>
     </div>
     <input type="submit" value="Add Course">
 </form>
