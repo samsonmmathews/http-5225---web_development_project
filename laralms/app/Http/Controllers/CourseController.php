@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Course;
 use App\Http\Requests\StoreCourseRequest;
 use App\Http\Requests\UpdateCourseRequest;
+use App\Models\Professor;
 use App\Models\Student;
 
 class CourseController extends Controller
@@ -31,7 +32,7 @@ class CourseController extends Controller
      */
     public function create()
     {
-        return view('courses.create');
+        return view('courses.create')->with('professors', Professor::all());
     }
 
     /**

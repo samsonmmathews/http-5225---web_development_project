@@ -14,7 +14,8 @@ class Course extends Model
 
     protected $fillable = [
         'name',
-        'description'
+        'description',
+        'professor_id'
     ];
 
     public function students():BelongsToMany
